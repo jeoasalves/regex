@@ -1,0 +1,14 @@
+Regex utilizado para pegar linhas com menos de 500 caracteres:
+(^(.{0,499})$)
+
+Regex utilizado para analisar linhas com possíveis erros de caracter:
+[^A-Za-z0-9\-\s]
+
+Procura o valor 414, na posição 341.
+^.{0,340}414.*
+
+Procura o valor 526, na posição 173 e 414 na posição 341.
+^(.{0,172})526(.{0,165})414.*
+
+Regex para retirar a última vírgula
+(\"([a-z])\")(,(?=\"([a-z])\"))*
